@@ -78,3 +78,5 @@ def init_db() -> None:
     conn.executescript(SCHEMA)
     conn.commit()
     conn.close()
+
+

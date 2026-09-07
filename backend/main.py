@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 import db
+import demo_seed
 import seed
 from auth_routes import router as auth_router
 from official_routes import router as official_router
@@ -23,7 +24,8 @@ app.add_middleware(
 @app.on_event("startup")
 def on_startup() -> None:
     db.init_db()
-    seed.seed_if_empty()
+    seed.seed_if_empty()  # officer_demo / counsellor_demo -- created once, kept across restarts
+    demo_seed.seed_demo_cases()  # synthetic victim cases -- reset on every restart by default
 
 
 @app.get("/health")
