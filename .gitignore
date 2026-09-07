@@ -1,0 +1,68 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# =========================
+# Database
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Project-specific secrets
+# =========================
+backend/seed.py
+backend/seed_data.py
+ai_core/seed.py
+ai_core/seed_data.py
+
+# =========================
+# Frontend
+# =========================
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
